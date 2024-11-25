@@ -4,18 +4,29 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        n = []
+        
+        #Solution 1
+        # n = []
+        # k = 0
+        # for i in nums:
+        #     if i in n:
+        #         continue
+        #     else:
+        #         n.append(i)
+        #         k = k+ 1
+        # print(n)
+        # print(len(n))
+        # nums[:len(n)] = n
+        # return len(n)
+    
+        s = set()
         k = 0
         for i in nums:
-            if i in n:
-                continue
-            else:
-                n.append(i)
-                k = k+ 1
-        print(n)
-        print(len(n))
-        nums[:len(n)] = n
-        return len(n)
+            if i not in s:
+                s.add(i)
+                nums[k] = i
+                k += 1
+        return k
                 
             
         
