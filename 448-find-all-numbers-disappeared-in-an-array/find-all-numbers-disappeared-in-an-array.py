@@ -19,12 +19,4 @@ class Solution(object):
 #         return new_nums
         
         #Solution 2 Onliner brute force\U0001f602\U0001f602\U0001f602\U0001f602
-        # return list(set(range(1, len(nums)+1)) - set(nums))
-    
-        ans = []
-        for c in nums:
-            nums[abs(c)-1] = -abs(nums[abs(c)-1])
-        for i in range(len(nums)):
-            if nums[i] > 0:
-                ans.append(i+1)
-        return ans
+        return list(set(range(1, len(nums)+1)) - set(nums))
