@@ -5,19 +5,19 @@ class Solution(object):
         :type k: int
         :rtype: str
         """
-        for i in range(0,len(s),2*k):
-            sub = s[i:i+k]
-            print (sub)
-            sub = sub[::-1]
-            s = s[:i]+sub+s[i+k:]
-        return s
-#         s = list(s)
-#         for i in range(0, len(s), 2*k):
-#             s[i:i+k] = reversed(s[i:i+k])
+        # for i in range(0,len(s),2*k):
+        #     sub = s[i:i+k]
+        #     print (sub)
+        #     sub = sub[::-1]
+        #     s = s[:i]+sub+s[i+k:]
+        # return s
+        s = list(s)
+        for i in range(0, len(s), 2*k):
+            s[i:i+k] = reversed(s[i:i+k])
         
-#         # print(s)
-#         s = "".join(s)
-#         print(s)
-#         return s
+        # print(s)
+        s = "".join(s)
+        print(s)
+        return s
         
             
